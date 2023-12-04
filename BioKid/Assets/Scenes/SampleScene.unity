@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -470,16 +470,100 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7925707942052567917, guid: 60bd762a42a00074ca18e43d5f73bead,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.07
+      objectReference: {fileID: 0}
+    - target: {fileID: -7925707942052567917, guid: 60bd762a42a00074ca18e43d5f73bead,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: -7925707942052567917, guid: 60bd762a42a00074ca18e43d5f73bead,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: -5894211988925935435, guid: 60bd762a42a00074ca18e43d5f73bead,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -5894211988925935435, guid: 60bd762a42a00074ca18e43d5f73bead,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5894211988925935435, guid: 60bd762a42a00074ca18e43d5f73bead,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -5894211988925935435, guid: 60bd762a42a00074ca18e43d5f73bead,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5894211988925935435, guid: 60bd762a42a00074ca18e43d5f73bead,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 60bd762a42a00074ca18e43d5f73bead,
         type: 3}
       propertyPath: m_Name
       value: v2
       objectReference: {fileID: 0}
+    - target: {fileID: 3220230098732094883, guid: 60bd762a42a00074ca18e43d5f73bead,
+        type: 3}
+      propertyPath: m_Name
+      value: CAR_01
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6042053486065857505, guid: 60bd762a42a00074ca18e43d5f73bead, type: 3}
+    - {fileID: -4103727520486626799, guid: 60bd762a42a00074ca18e43d5f73bead, type: 3}
+    - {fileID: -3228370806192729996, guid: 60bd762a42a00074ca18e43d5f73bead, type: 3}
+    - {fileID: -7144118287527573056, guid: 60bd762a42a00074ca18e43d5f73bead, type: 3}
+    - {fileID: -96628016518991824, guid: 60bd762a42a00074ca18e43d5f73bead, type: 3}
+    - {fileID: 8909081222592176106, guid: 60bd762a42a00074ca18e43d5f73bead, type: 3}
+    - {fileID: -7982959996438584846, guid: 60bd762a42a00074ca18e43d5f73bead, type: 3}
+    - {fileID: 2985116717047361949, guid: 60bd762a42a00074ca18e43d5f73bead, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3220230098732094883, guid: 60bd762a42a00074ca18e43d5f73bead,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1696540578}
   m_SourcePrefab: {fileID: 100100000, guid: 60bd762a42a00074ca18e43d5f73bead, type: 3}
+--- !u!1 &1696540577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3220230098732094883, guid: 60bd762a42a00074ca18e43d5f73bead,
+    type: 3}
+  m_PrefabInstance: {fileID: 1696540576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1696540578
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696540577}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc58583b0a6167e4f8b320133b21937c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1880833169
 GameObject:
   m_ObjectHideFlags: 0
