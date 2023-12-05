@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="glacier" size="1.000000 0.564972" />
     <ImageTarget name="ville" size="1.000000 0.562857" />
   </Tracking>
 </QCARConfig>
