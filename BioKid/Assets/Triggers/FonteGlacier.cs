@@ -5,6 +5,7 @@ using UnityEngine;
 public class FonteGlacier : MonoBehaviour
 {
     public GameObject cubeObject;
+    public GameObject polarObject;
     private Vector3 originalPosition;
     private void OnTriggerEnter(Collider other)
     {
@@ -12,13 +13,22 @@ public class FonteGlacier : MonoBehaviour
         {
             originalPosition = cubeObject.transform.position;
         }
+        if (polarObject != null)
+        {
+            originalPosition = polarObject.transform.position;
+        }
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (cubeObject != null)
         {
-            cubeObject.transform.Translate(Vector3.down * Time.deltaTime);
+            cubeObject.transform.Translate(Vector3.back * Time.deltaTime);
+
+        }
+        if (polarObject != null)
+        {
+            polarObject.transform.Translate(Vector3.back * Time.deltaTime);
         }
     }
 
@@ -28,6 +38,11 @@ public class FonteGlacier : MonoBehaviour
         if (cubeObject != null)
         {
             cubeObject.transform.position = originalPosition;
+        }
+
+        if (polarObject != null)
+        {
+            polarObject.transform.position = originalPosition;
         }
     }
 }
