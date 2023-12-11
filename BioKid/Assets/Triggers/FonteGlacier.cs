@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollidersCity : MonoBehaviour
+public class FonteGlacier : MonoBehaviour
 {
     public GameObject cubeObject;
     private Vector3 originalPosition;
