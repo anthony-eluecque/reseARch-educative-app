@@ -183,6 +183,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1546402058459247203, guid: 46e0cfae41dade447925b7de50ddc053,
         type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1546402058459247203, guid: 46e0cfae41dade447925b7de50ddc053,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1546402058459247203, guid: 46e0cfae41dade447925b7de50ddc053,
+        type: 3}
       propertyPath: moveWithTransform
       value: 1
       objectReference: {fileID: 0}
@@ -249,7 +259,7 @@ PrefabInstance:
     - target: {fileID: 1546402058459247203, guid: 46e0cfae41dade447925b7de50ddc053,
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1546402058459247203, guid: 46e0cfae41dade447925b7de50ddc053,
         type: 3}
@@ -279,7 +289,7 @@ PrefabInstance:
     - target: {fileID: 1546402058459247203, guid: 46e0cfae41dade447925b7de50ddc053,
         type: 3}
       propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1546402058459247203, guid: 46e0cfae41dade447925b7de50ddc053,
         type: 3}
@@ -790,7 +800,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696540577}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 375deb7106d6db248a358f88acf5d459, type: 3}
   m_Name: 
