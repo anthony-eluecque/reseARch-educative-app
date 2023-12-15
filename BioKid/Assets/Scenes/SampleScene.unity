@@ -862,6 +862,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: CAR_PARK_02
       objectReference: {fileID: 0}
+    - target: {fileID: 8498824594357583991, guid: 60bd762a42a00074ca18e43d5f73bead,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.681
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498824594357583991, guid: 60bd762a42a00074ca18e43d5f73bead,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.214496
+      objectReference: {fileID: 0}
+    - target: {fileID: 8498824594357583991, guid: 60bd762a42a00074ca18e43d5f73bead,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.447829
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6042053486065857505, guid: 60bd762a42a00074ca18e43d5f73bead, type: 3}
@@ -896,7 +911,38 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 256344093}
+    - targetCorrespondingSourceObject: {fileID: -5712983979610481542, guid: 60bd762a42a00074ca18e43d5f73bead,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1696540578}
   m_SourcePrefab: {fileID: 100100000, guid: 60bd762a42a00074ca18e43d5f73bead, type: 3}
+--- !u!1 &1696540577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5712983979610481542, guid: 60bd762a42a00074ca18e43d5f73bead,
+    type: 3}
+  m_PrefabInstance: {fileID: 1696540576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1696540578
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696540577}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fe2b35cffd9aaf446881ea712c930765, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1696540579 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7861473996650758115, guid: 60bd762a42a00074ca18e43d5f73bead,
