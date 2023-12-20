@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PathScript : MonoBehaviour
@@ -11,13 +10,21 @@ public class PathScript : MonoBehaviour
     public int speed;
 
     private Vector3 originalPosition;
+    private Vector3 cityWaypointPosition;
 
     private void OnTriggerEnter(Collider other)
     {
         if (cloud != null)
         {
             originalPosition = cloud.transform.position;
+            StartCoroutine(StoreCityWaypointPosition());
         }
+    }
+
+    private IEnumerator StoreCityWaypointPosition()
+    {
+        yield return new WaitForFixedUpdate(); // Attendre le prochain frame fixe
+        cityWaypointPosition = waypointCity.transform.position;
     }
 
     private void OnTriggerStay(Collider other)
@@ -33,7 +40,16 @@ public class PathScript : MonoBehaviour
     {
         if (cloud != null)
         {
-            cloud.transform.position = originalPosition;
+            StartCoroutine(ReturnToCityWaypoint());
+        }
+    }
+
+    private IEnumerator ReturnToCityWaypoint()
+    {
+        while (cloud.transform.position != cityWaypointPosition)
+        {
+            cloud.transform.position = Vector3.MoveTowards(cloud.transform.position, cityWaypointPosition, speed * Time.deltaTime);
+            yield return null;
         }
     }
 }
