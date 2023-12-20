@@ -6,6 +6,8 @@ public class FonteGlacier : MonoBehaviour
 {
     public GameObject cubeObject;
     public GameObject polarObject;
+    public GameObject surfacePolarObject;
+
     private Vector3 originalPosition;
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +19,9 @@ public class FonteGlacier : MonoBehaviour
         {
             originalPosition = polarObject.transform.position;
         }
+
+        StartCoroutine(UpdateOriginPosition(surfacePolarObject));
+
     }
 
     private void OnTriggerStay(Collider other)
@@ -43,6 +48,18 @@ public class FonteGlacier : MonoBehaviour
         if (polarObject != null)
         {
             polarObject.transform.position = originalPosition;
+        }
+
+        StopCoroutine(UpdateOriginPosition(surfacePolarObject));
+
+    }
+
+    private IEnumerator UpdateOriginPosition(GameObject target)
+    {
+        while (true)
+        {
+            originalPosition = target.transform.position;
+            yield return null;
         }
     }
 }
