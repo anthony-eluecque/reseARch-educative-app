@@ -261,6 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubeObject: {fileID: 954245447}
   polarObject: {fileID: 228653971}
+  surfacePolarObject: {fileID: 1200352170}
 --- !u!65 &317184209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1462,6 +1463,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 317184208}
   m_SourcePrefab: {fileID: 100100000, guid: d4c3d1117c1e6dc429a116f829c34117, type: 3}
+--- !u!1 &1200352170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: d4c3d1117c1e6dc429a116f829c34117,
+    type: 3}
+  m_PrefabInstance: {fileID: 1200352169}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1227670476
 PrefabInstance:
   m_ObjectHideFlags: 0
