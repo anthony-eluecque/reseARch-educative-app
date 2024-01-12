@@ -24,12 +24,17 @@ public class FonteGlacier : MonoBehaviour
         if (cubeObject != null)
         {
             cubeObject.transform.Translate(Vector3.back * Time.deltaTime);
-
+            Destroy(cubeObject, 1);
         }
-        if (polarObject != null)
+
+        if (cubeObject != null)
         {
             polarObject.transform.Translate(Vector3.back * Time.deltaTime);
+     
+            Destroy(polarObject, 1);
+
         }
+
     }
 
     private void OnTriggerExit(Collider other)
