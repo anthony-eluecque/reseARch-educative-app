@@ -8,6 +8,7 @@ public class VScriptButtonManager : MonoBehaviour
 {
 
     public GameObject yourObjectToControl;
+    public GameObject button;
     public string virtualButtonName;
 
     private VirtualButtonBehaviour virtualButton; 
@@ -39,12 +40,14 @@ public class VScriptButtonManager : MonoBehaviour
     {
         Debug.Log("Button Pressed!");
         player.Play();
+        button.GetComponent<Renderer>().enabled = false;
     }
 
     public void OnButtonReleased(VirtualButtonBehaviour vb)
     {
         Debug.Log("Button Released!");
         player.Pause();
+        button.GetComponent<Renderer>().enabled = true;
     }
 
 
