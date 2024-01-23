@@ -380,7 +380,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -8700617353114198275, guid: 59257e694eabcd14c99b517ec4d7f1a1, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 59257e694eabcd14c99b517ec4d7f1a1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 338647687}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 59257e694eabcd14c99b517ec4d7f1a1,
         type: 3}
@@ -398,6 +402,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 116247094}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 59257e694eabcd14c99b517ec4d7f1a1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 116247098}
   m_SourcePrefab: {fileID: 100100000, guid: 59257e694eabcd14c99b517ec4d7f1a1, type: 3}
 --- !u!4 &116247031 stripped
 Transform:
@@ -914,6 +922,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.5, y: 2, z: 3.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &116247098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116247093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe165921dc257414da8be7b35f4f4b92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloud: {fileID: 1520648009}
+  waypointCity: {fileID: 830414319}
+  waypointTarget: {fileID: 338647686}
+  speed: 1
 --- !u!1 &217187161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,7 +1109,7 @@ GameObject:
   - component: {fileID: 292011527}
   - component: {fileID: 292011526}
   - component: {fileID: 292011525}
-  - component: {fileID: 292011524}
+  - component: {fileID: 292011528}
   m_Layer: 0
   m_Name: ForestTarget
   m_TagString: Untagged
@@ -1093,25 +1117,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &292011524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292011523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 292011526}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: forest_target
-  mDatasetName: Vuforia/Image_target.xml
-  mCastedBehaviour: {fileID: 292011526}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &292011525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,7 +1187,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 292011524}
+  mPreview: {fileID: 292011528}
 --- !u!4 &292011527
 Transform:
   m_ObjectHideFlags: 0
@@ -1199,6 +1204,25 @@ Transform:
   - {fileID: 116247031}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &292011528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292011523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 292011526}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: forest_target
+  mDatasetName: Vuforia/Image_target.xml
+  mCastedBehaviour: {fileID: 292011526}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &317184206 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d4c3d1117c1e6dc429a116f829c34117,
@@ -1290,6 +1314,37 @@ MonoBehaviour:
   waypointCity: {fileID: 830414319}
   waypointTarget: {fileID: 1727966299}
   speed: 1
+--- !u!1 &338647686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 338647687}
+  m_Layer: 0
+  m_Name: WaypointForest
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &338647687
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338647686}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.03, y: 2.515999, z: -0.069}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 116247031}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
