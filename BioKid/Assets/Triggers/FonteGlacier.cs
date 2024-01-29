@@ -8,19 +8,21 @@ public class FonteGlacier : MonoBehaviour
     public GameObject polarObject;
     public GameObject surfacePolarObject;
 
-    private Vector3 originalPosition;
+    private Vector3 originalPositionGlacier;
+    private Vector3 originalPositionPolarBear;
     private void OnTriggerEnter(Collider other)
     {
         if (cubeObject != null)
         {
-            originalPosition = cubeObject.transform.position;
+            originalPositionGlacier = cubeObject.transform.position;
         }
         if (polarObject != null)
         {
-            originalPosition = polarObject.transform.position;
+            originalPositionPolarBear = polarObject.transform.position;
         }
 
-        StartCoroutine(UpdateOriginPosition(surfacePolarObject));
+        StartCoroutine(UpdateOriginPosition(surfacePolarObject, originalPositionGlacier));
+        StartCoroutine(UpdateOriginPosition(polarObject, originalPositionPolarBear));
 
     }
 
@@ -39,26 +41,26 @@ public class FonteGlacier : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-
         if (cubeObject != null)
         {
-            cubeObject.transform.position = originalPosition;
+            cubeObject.transform.position = originalPositionGlacier;
         }
 
         if (polarObject != null)
         {
-            polarObject.transform.position = originalPosition;
+            polarObject.transform.position = originalPositionPolarBear;
         }
 
-        StopCoroutine(UpdateOriginPosition(surfacePolarObject));
+        StopCoroutine(UpdateOriginPosition(surfacePolarObject, originalPositionGlacier));
+        StopCoroutine(UpdateOriginPosition(polarObject, originalPositionPolarBear));
 
     }
 
-    private IEnumerator UpdateOriginPosition(GameObject target)
+    private IEnumerator UpdateOriginPosition(GameObject target, Vector3 vector)
     {
         while (true)
         {
-            originalPosition = target.transform.position;
+            vector = target.transform.position;
             yield return null;
         }
     }
