@@ -53,7 +53,7 @@ Material:
     m_Floats:
     - Vector1_1D9A2AE: 0.01
     - Vector1_EFE64959: 30
-    - Vector1_FEFF47F1: -0.46
+    - Vector1_FEFF47F1: 0.08
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
