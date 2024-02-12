@@ -13,20 +13,24 @@ public class DissolveScript : MonoBehaviour
     void Start()
     {
 
+        dissolveMaterial = GetComponent<Renderer>().material;
+        dissolveMaterial.SetFloat("_dissolve", 0);
+        
+        StartCoroutine(Dissolve());
 
-        float floatValue = dissolveMaterial.GetFloat("Dissolve");
+        
 
-        Debug.Log(floatValue);
+    }
 
-        // Je veux que progressivement la valeur augmente de 0 à 1
-
-        for (float i = 0; i < 1; i += 0.1f)
+    IEnumerator Dissolve()
+    {
+        float dissolve = 0;
+        while (dissolve < 1)
         {
-            dissolveMaterial.SetFloat("Dissolve", i);
+            dissolve += Time.deltaTime;
+            dissolveMaterial.SetFloat("_dissolve", dissolve);
+            yield return null;
         }
-        
-        
-
     }
 
     // Update is called once per frame
