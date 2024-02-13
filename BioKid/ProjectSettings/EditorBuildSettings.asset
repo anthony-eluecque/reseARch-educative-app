@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/FireTreeScene.unity
     guid: 2447b9b4debd90442973c63ad7f3494a
   - enabled: 1
-    path: Assets/Scenes/GlobalScene.unity
+    path: Assets/Scenes/GlobalWithAnimals.unity
     guid: 3785a2a7832337240ba83c9b49e823e6
   m_configObjects: {}
