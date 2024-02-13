@@ -6,24 +6,22 @@ public class DissolveScript : MonoBehaviour
 {
     
     public Material dissolveMaterial;
+    public float activationDelay;
+    public List<GameObject> targets;
 
-
-
-
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-
-        dissolveMaterial = GetComponent<Renderer>().material;
-        dissolveMaterial.SetFloat("_dissolve", 0);
+        Debug.Log("Triggered");
+        StartCoroutine(ActivateDissolve());
         
-        StartCoroutine(Dissolve());
-
-        
-
     }
 
-    IEnumerator Dissolve()
+    IEnumerator ActivateDissolve()
     {
+        Debug.Log("Coroutine started");
+        // on attend activationDelay secondes
+        yield return new WaitForSeconds(activationDelay);
+
         float dissolve = 0;
         while (dissolve < 1)
         {
@@ -31,11 +29,22 @@ public class DissolveScript : MonoBehaviour
             dissolveMaterial.SetFloat("_dissolve", dissolve);
             yield return null;
         }
+        yield return null;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        
+        StartCoroutine(DesactivateDissolve());
+    }
+
+    IEnumerator DesactivateDissolve()
+    {
+        float dissolve = 1;
+        while (dissolve > 0)
+        {
+            dissolve -= Time.deltaTime;
+            dissolveMaterial.SetFloat("_dissolve", dissolve);
+            yield return null;
+        }
     }
 }
