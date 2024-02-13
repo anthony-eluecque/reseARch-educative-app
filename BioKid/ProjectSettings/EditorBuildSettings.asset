@@ -7,8 +7,11 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/Scenes/AnimationScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
-    path: Assets/Scenes/GlobalWithAnimals.unity
+    guid: b8f7c2a2d57def844a40ca0ccce5ea50
+  - enabled: 0
+    path: Assets/Scenes/FireTreeScene.unity
     guid: 2447b9b4debd90442973c63ad7f3494a
+  - enabled: 1
+    path: Assets/Scenes/GlobalScene.unity
+    guid: 3785a2a7832337240ba83c9b49e823e6
   m_configObjects: {}
