@@ -21,13 +21,20 @@ public class FireActivationScript : MonoBehaviour
         fires = new List<ParticleSystem>();
 
         // Pour chaque target, on lui assigne un feu a ses coordonnées
+
+        var i = 0;
+
         foreach (GameObject target in targets)
         {
-            ParticleSystem newFire = Instantiate(fire, target.transform.position, Quaternion.identity).GetComponent<ParticleSystem>();
-            newFire.transform.parent = target.transform;
-            newFire.Stop();
-            // on stocke le feu dans une liste 
-            fires.Add(newFire);
+            if (i<8)
+            {
+                ParticleSystem newFire = Instantiate(fire, target.transform.position, Quaternion.identity).GetComponent<ParticleSystem>();
+                newFire.transform.parent = target.transform;
+                newFire.Stop();
+                // on stocke le feu dans une liste 
+                fires.Add(newFire);
+                i++;
+            }
         }
     }
     private void PropagateFire()
