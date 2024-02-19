@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<<< HEAD:BioKid/Assets/Scenes/CloudWaypointsScene.unity
   m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+========
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+>>>>>>>> feat/animations-bear:BioKid/Assets/Animation/deplacementbear.unity
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -126,6 +130,55 @@ NavMeshSettings:
 --- !u!1 &228653971 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1986958724176193649, guid: d4c3d1117c1e6dc429a116f829c34117,
+    type: 3}
+  m_PrefabInstance: {fileID: 1200352169}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &228653975
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228653971}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: b0ba9c2a4c9e3e44b83b91a3fc8530b4, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!54 &228653977
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228653971}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!4 &228653978 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7422866094089828433, guid: d4c3d1117c1e6dc429a116f829c34117,
     type: 3}
   m_PrefabInstance: {fileID: 1200352169}
   m_PrefabAsset: {fileID: 0}
@@ -610,8 +663,6 @@ MonoBehaviour:
   m_Script: {fileID: -1826476478, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mWorldCenterMode: 1
-  mWorldCenter: {fileID: 0}
 --- !u!81 &845007307
 AudioListener:
   m_ObjectHideFlags: 0
@@ -692,6 +743,149 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1200352169}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &998836309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 998836313}
+  - component: {fileID: 998836312}
+  - component: {fileID: 998836311}
+  - component: {fileID: 998836310}
+  m_Layer: 0
+  m_Name: game
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &998836310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998836309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
+--- !u!81 &998836311
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998836309}
+  m_Enabled: 1
+--- !u!20 &998836312
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998836309}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &998836313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998836309}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.2715266, y: 0.3322736, z: -1.68}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1049059914 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 132a1cfd47a415543ba51e8b9c13ecfa,
+    type: 3}
+  m_PrefabInstance: {fileID: 2063715672}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1144928084
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,38 +917,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
-  UsePoseSmoothing: 0
-  AnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 3.3333333
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
-      value: 1
-      inSlope: 3.3333333
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  OnTargetFound:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTargetLost:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1144928086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -767,21 +929,6 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreviewVisible: 1
-  RuntimeOcclusion: 0
-  RuntimeCollider: 0
-  mTrackableName: glacier
-  mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Image_target.xml
-  mAspectRatio: 0.564972
-  mImageTargetType: 0
-  mWidth: 1
-  mHeight: 0.564972
-  mRuntimeTexture: {fileID: 0}
-  mMotionHint: 1
-  mTrackingOptimization: 0
-  mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1144928088}
 --- !u!4 &1144928087
 Transform:
   m_ObjectHideFlags: 0
@@ -791,7 +938,11 @@ Transform:
   m_GameObject: {fileID: 1144928084}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<<< HEAD:BioKid/Assets/Scenes/CloudWaypointsScene.unity
   m_LocalPosition: {x: 2.69, y: 0, z: 0}
+========
+  m_LocalPosition: {x: -1.74, y: 0, z: 0}
+>>>>>>>> feat/animations-bear:BioKid/Assets/Animation/deplacementbear.unity
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -810,13 +961,6 @@ MonoBehaviour:
   m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1144928086}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: glacier
-  mDatasetName: Vuforia/Image_target.xml
-  mCastedBehaviour: {fileID: 1144928086}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!1001 &1200352169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -828,7 +972,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d4c3d1117c1e6dc429a116f829c34117,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.102
+      value: 3.997
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4c3d1117c1e6dc429a116f829c34117,
         type: 3}
@@ -843,22 +987,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d4c3d1117c1e6dc429a116f829c34117,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4c3d1117c1e6dc429a116f829c34117,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4c3d1117c1e6dc429a116f829c34117,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4c3d1117c1e6dc429a116f829c34117,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4c3d1117c1e6dc429a116f829c34117,
         type: 3}
@@ -868,7 +1012,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d4c3d1117c1e6dc429a116f829c34117,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d4c3d1117c1e6dc429a116f829c34117,
         type: 3}
@@ -880,15 +1024,76 @@ PrefabInstance:
       propertyPath: m_Name
       value: glacier
       objectReference: {fileID: 0}
+    - target: {fileID: 7422866094089828433, guid: d4c3d1117c1e6dc429a116f829c34117,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1774
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422866094089828433, guid: d4c3d1117c1e6dc429a116f829c34117,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.252
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422866094089828433, guid: d4c3d1117c1e6dc429a116f829c34117,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.4777
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422866094089828433, guid: d4c3d1117c1e6dc429a116f829c34117,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.58845496
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422866094089828433, guid: d4c3d1117c1e6dc429a116f829c34117,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.58845496
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422866094089828433, guid: d4c3d1117c1e6dc429a116f829c34117,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.39207238
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422866094089828433, guid: d4c3d1117c1e6dc429a116f829c34117,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.39207238
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422866094089828433, guid: d4c3d1117c1e6dc429a116f829c34117,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422866094089828433, guid: d4c3d1117c1e6dc429a116f829c34117,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422866094089828433, guid: d4c3d1117c1e6dc429a116f829c34117,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -3.5379944
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 65702495048144492, guid: d4c3d1117c1e6dc429a116f829c34117, type: 3}
     - {fileID: -8700617353114198275, guid: d4c3d1117c1e6dc429a116f829c34117, type: 3}
     m_AddedGameObjects:
+<<<<<<<< HEAD:BioKid/Assets/Scenes/CloudWaypointsScene.unity
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d4c3d1117c1e6dc429a116f829c34117,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1899167185}
+========
+    - targetCorrespondingSourceObject: {fileID: 7422866094089828433, guid: d4c3d1117c1e6dc429a116f829c34117,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1049059914}
+    - targetCorrespondingSourceObject: {fileID: 7422866094089828433, guid: d4c3d1117c1e6dc429a116f829c34117,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1831934210}
+>>>>>>>> feat/animations-bear:BioKid/Assets/Animation/deplacementbear.unity
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d4c3d1117c1e6dc429a116f829c34117,
         type: 3}
@@ -902,11 +1107,106 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 317184208}
+<<<<<<<< HEAD:BioKid/Assets/Scenes/CloudWaypointsScene.unity
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d4c3d1117c1e6dc429a116f829c34117,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 317184211}
+========
+    - targetCorrespondingSourceObject: {fileID: 1986958724176193649, guid: d4c3d1117c1e6dc429a116f829c34117,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 228653975}
+    - targetCorrespondingSourceObject: {fileID: 1986958724176193649, guid: d4c3d1117c1e6dc429a116f829c34117,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 228653977}
+>>>>>>>> feat/animations-bear:BioKid/Assets/Animation/deplacementbear.unity
   m_SourcePrefab: {fileID: 100100000, guid: d4c3d1117c1e6dc429a116f829c34117, type: 3}
+--- !u!1001 &1395337039
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 228653978}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5527a3f53e242b54e9148a29e1517393,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5527a3f53e242b54e9148a29e1517393,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5527a3f53e242b54e9148a29e1517393,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5527a3f53e242b54e9148a29e1517393,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 80.256134
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5527a3f53e242b54e9148a29e1517393,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.32674
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5527a3f53e242b54e9148a29e1517393,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.4047966
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5527a3f53e242b54e9148a29e1517393,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.39207238
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5527a3f53e242b54e9148a29e1517393,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.39207238
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5527a3f53e242b54e9148a29e1517393,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.58845496
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5527a3f53e242b54e9148a29e1517393,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.58845496
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5527a3f53e242b54e9148a29e1517393,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5527a3f53e242b54e9148a29e1517393,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5527a3f53e242b54e9148a29e1517393,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5527a3f53e242b54e9148a29e1517393,
+        type: 3}
+      propertyPath: m_Name
+      value: Stepping Backward
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: -7657966619581158213, guid: 5527a3f53e242b54e9148a29e1517393, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5527a3f53e242b54e9148a29e1517393, type: 3}
 --- !u!1 &1659444418 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 60bd762a42a00074ca18e43d5f73bead,
@@ -1021,6 +1321,7 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1659444420}
   m_SourcePrefab: {fileID: 100100000, guid: 60bd762a42a00074ca18e43d5f73bead, type: 3}
+<<<<<<<< HEAD:BioKid/Assets/Scenes/CloudWaypointsScene.unity
 --- !u!1001 &1718907629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1557,6 +1858,14 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+========
+--- !u!4 &1831934210 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5527a3f53e242b54e9148a29e1517393,
+    type: 3}
+  m_PrefabInstance: {fileID: 1395337039}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>>> feat/animations-bear:BioKid/Assets/Animation/deplacementbear.unity
 --- !u!1 &1880833169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,38 +1897,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
-  UsePoseSmoothing: 0
-  AnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 3.3333333
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
-      value: 1
-      inSlope: 3.3333333
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  OnTargetFound:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTargetLost:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1880833171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1632,21 +1909,6 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreviewVisible: 1
-  RuntimeOcclusion: 0
-  RuntimeCollider: 0
-  mTrackableName: ville
-  mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Image_target.xml
-  mAspectRatio: 0.562857
-  mImageTargetType: 0
-  mWidth: 1
-  mHeight: 0.562857
-  mRuntimeTexture: {fileID: 0}
-  mMotionHint: 1
-  mTrackingOptimization: 0
-  mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1880833173}
 --- !u!4 &1880833172
 Transform:
   m_ObjectHideFlags: 0
@@ -1675,6 +1937,7 @@ MonoBehaviour:
   m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<<< HEAD:BioKid/Assets/Scenes/CloudWaypointsScene.unity
   mObserverBehaviour: {fileID: 1880833171}
   mHiddenRoot: {fileID: 0}
   mTargetName: ville
@@ -1684,6 +1947,78 @@ MonoBehaviour:
   mMeshRenderer: {fileID: 0}
 --- !u!1 &1899167184
 GameObject:
+========
+--- !u!1001 &2063715672
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 228653978}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 132a1cfd47a415543ba51e8b9c13ecfa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 132a1cfd47a415543ba51e8b9c13ecfa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 132a1cfd47a415543ba51e8b9c13ecfa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 132a1cfd47a415543ba51e8b9c13ecfa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 132a1cfd47a415543ba51e8b9c13ecfa,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 132a1cfd47a415543ba51e8b9c13ecfa,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 132a1cfd47a415543ba51e8b9c13ecfa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 132a1cfd47a415543ba51e8b9c13ecfa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 132a1cfd47a415543ba51e8b9c13ecfa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 132a1cfd47a415543ba51e8b9c13ecfa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 132a1cfd47a415543ba51e8b9c13ecfa,
+        type: 3}
+      propertyPath: m_Name
+      value: deplacement
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 132a1cfd47a415543ba51e8b9c13ecfa, type: 3}
+--- !u!1001 &2079021309
+PrefabInstance:
+>>>>>>>> feat/animations-bear:BioKid/Assets/Animation/deplacementbear.unity
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1744,38 +2079,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
-  UsePoseSmoothing: 0
-  AnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 3.3333333
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
-      value: 1
-      inSlope: 3.3333333
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  OnTargetFound:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTargetLost:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &2117574795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1788,21 +2091,6 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreviewVisible: 1
-  RuntimeOcclusion: 0
-  RuntimeCollider: 0
-  mTrackableName: forest_target
-  mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Image_target.xml
-  mAspectRatio: 0.5625
-  mImageTargetType: 0
-  mWidth: 1
-  mHeight: 0.5625
-  mRuntimeTexture: {fileID: 0}
-  mMotionHint: 1
-  mTrackingOptimization: 0
-  mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 2117574797}
 --- !u!4 &2117574796
 Transform:
   m_ObjectHideFlags: 0
@@ -1831,13 +2119,6 @@ MonoBehaviour:
   m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 2117574795}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: forest_target
-  mDatasetName: Vuforia/Image_target.xml
-  mCastedBehaviour: {fileID: 2117574795}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1847,3 +2128,4 @@ SceneRoots:
   - {fileID: 1880833172}
   - {fileID: 1144928087}
   - {fileID: 2117574796}
+  - {fileID: 998836313}
