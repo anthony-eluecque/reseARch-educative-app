@@ -6,6 +6,9 @@ public class FonteGlacier : MonoBehaviour
 {
     public GameObject cubeObject;
     public GameObject polarObject;
+    public GameObject penguinObject;
+    public GameObject iglooObject;
+
     private Vector3 originalPosition;
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +20,15 @@ public class FonteGlacier : MonoBehaviour
         {
             originalPosition = polarObject.transform.position;
         }
+
+        if (penguinObject != null)
+        {
+            originalPosition = penguinObject.transform.position;
+        }
+        if (iglooObject != null)
+        {
+            originalPosition = iglooObject.transform.position;
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -27,11 +39,27 @@ public class FonteGlacier : MonoBehaviour
             Destroy(cubeObject, 1);
         }
 
-        if (cubeObject != null)
+        if (polarObject != null)
         {
             polarObject.transform.Translate(Vector3.back * Time.deltaTime);
      
             Destroy(polarObject, 1);
+
+        }
+
+        if (penguinObject != null)
+        {
+            penguinObject.transform.Translate(Vector3.down * Time.deltaTime);
+
+            Destroy(penguinObject, 1);
+
+        }
+
+        if (iglooObject != null)
+        {
+            iglooObject.transform.Translate(Vector3.down * Time.deltaTime);
+
+            Destroy(iglooObject, 1);
 
         }
 
@@ -48,6 +76,16 @@ public class FonteGlacier : MonoBehaviour
         if (polarObject != null)
         {
             polarObject.transform.position = originalPosition;
+        }
+
+        if (penguinObject != null)
+        {
+            penguinObject.transform.position = originalPosition;
+        }
+
+        if (iglooObject != null)
+        {
+            iglooObject.transform.position = originalPosition;
         }
     }
 }
