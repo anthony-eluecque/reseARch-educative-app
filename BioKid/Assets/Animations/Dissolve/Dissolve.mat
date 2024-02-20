@@ -56,7 +56,7 @@ Material:
     - Vector1_FEFF47F1: 0.08
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _dissolve: 1.0214777
+    - _dissolve: -0.022624243
     m_Colors:
     - Color_6DF76E71: {r: 0, g: 5.145098, b: 16, a: 0}
   m_BuildTextureStacks: []
