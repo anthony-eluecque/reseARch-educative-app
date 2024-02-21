@@ -10,11 +10,14 @@ public class FonteGlacier : MonoBehaviour
     public GameObject penguinObject;
     public GameObject iglooObject;
 
+    public float delayFonteGlacier;
 
     private Vector3 originalPositionGlacier;
     private Vector3 originalPositionPolarBear;
     private Vector3 originalPositionPinguin;
     private Vector3 originalPositionIgloo;
+
+    private bool isDelayActive = false;
 
 
     private void OnTriggerEnter(Collider other)
@@ -36,43 +39,40 @@ public class FonteGlacier : MonoBehaviour
             originalPositionPinguin = penguinObject.transform.position;
         }
 
+        StartCoroutine(StartDelay());
+
+
+    }
+
+    private IEnumerator StartDelay()
+    {
+        isDelayActive = true;
+        yield return new WaitForSeconds(delayFonteGlacier);
+        isDelayActive = false;
 
         StartCoroutine(UpdateOriginPosition(surfacePolarObject, originalPositionGlacier));
         StartCoroutine(UpdateOriginPosition(polarObject, originalPositionPolarBear));
 
         StartCoroutine(UpdateOriginPosition(penguinObject, originalPositionPinguin));
         StartCoroutine(UpdateOriginPosition(iglooObject, originalPositionIgloo));
-
-
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (cubeObject != null)
+        if (!isDelayActive)
         {
-            cubeObject.transform.Translate(Vector3.back * Time.deltaTime);
+            if (cubeObject != null)
+                cubeObject.transform.Translate(Vector3.back * Time.deltaTime);
+
+            if (polarObject != null)
+                polarObject.transform.Translate(Vector3.back * Time.deltaTime);
+
+            if (penguinObject != null)
+                penguinObject.transform.Translate(Vector3.down * Time.deltaTime);
+
+            if (iglooObject != null)
+                iglooObject.transform.Translate(Vector3.down * Time.deltaTime);
         }
-
-        if (polarObject != null)
-        {
-            polarObject.transform.Translate(Vector3.back * Time.deltaTime);
-
-        }
-
-        if (penguinObject != null)
-        {
-            penguinObject.transform.Translate(Vector3.down * Time.deltaTime);
-
-
-        }
-
-        if (iglooObject != null)
-        {
-            iglooObject.transform.Translate(Vector3.down * Time.deltaTime);
-
-
-        }
-
     }
 
     private void OnTriggerExit(Collider other)
