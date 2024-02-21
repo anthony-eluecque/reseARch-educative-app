@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FonteGlacier : MonoBehaviour
@@ -11,6 +10,7 @@ public class FonteGlacier : MonoBehaviour
     public GameObject iglooObject;
 
     public float delayFonteGlacier;
+    public float delayDisappearance = 1f; 
 
     private Vector3 originalPositionGlacier;
     private Vector3 originalPositionPolarBear;
@@ -18,7 +18,8 @@ public class FonteGlacier : MonoBehaviour
     private Vector3 originalPositionIgloo;
 
     private bool isDelayActive = false;
-
+    private bool isDisappearScheduled = false;
+    private Coroutine disappearanceCoroutine;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -40,26 +41,33 @@ public class FonteGlacier : MonoBehaviour
         }
 
         StartCoroutine(StartDelay());
-
-
+        disappearanceCoroutine = StartCoroutine(ScheduleDisappearance());
     }
 
     private IEnumerator StartDelay()
     {
-        isDelayActive = true;
-        yield return new WaitForSeconds(delayFonteGlacier);
-        isDelayActive = false;
-
         StartCoroutine(UpdateOriginPosition(surfacePolarObject, originalPositionGlacier));
         StartCoroutine(UpdateOriginPosition(polarObject, originalPositionPolarBear));
-
         StartCoroutine(UpdateOriginPosition(penguinObject, originalPositionPinguin));
         StartCoroutine(UpdateOriginPosition(iglooObject, originalPositionIgloo));
+
+        yield return null;
+    }
+
+    private IEnumerator ScheduleDisappearance()
+    {
+        yield return new WaitForSeconds(delayDisappearance);
+        isDisappearScheduled = true;
+
+        SetObjectActive(cubeObject, false);
+        SetObjectActive(polarObject, false);
+        SetObjectActive(penguinObject, false);
+        SetObjectActive(iglooObject, false);
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (!isDelayActive)
+        if (!isDelayActive && !isDisappearScheduled)
         {
             if (cubeObject != null)
                 cubeObject.transform.Translate(Vector3.back * Time.deltaTime);
@@ -77,6 +85,18 @@ public class FonteGlacier : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (disappearanceCoroutine != null)
+        {
+            StopCoroutine(disappearanceCoroutine);
+        }
+
+        isDisappearScheduled = false;
+
+        SetObjectActive(cubeObject, true);
+        SetObjectActive(polarObject, true);
+        SetObjectActive(penguinObject, true);
+        SetObjectActive(iglooObject, true);
+
         if (cubeObject != null)
         {
             cubeObject.transform.position = originalPositionGlacier;
@@ -97,6 +117,7 @@ public class FonteGlacier : MonoBehaviour
             iglooObject.transform.position = originalPositionIgloo;
         }
 
+
         StopCoroutine(UpdateOriginPosition(surfacePolarObject, originalPositionGlacier));
         StopCoroutine(UpdateOriginPosition(polarObject, originalPositionPolarBear));
         StopCoroutine(UpdateOriginPosition(penguinObject, originalPositionPinguin));
@@ -110,6 +131,14 @@ public class FonteGlacier : MonoBehaviour
         {
             vector = target.transform.position;
             yield return null;
+        }
+    }
+
+    private void SetObjectActive(GameObject obj, bool isActive)
+    {
+        if (obj != null)
+        {
+            obj.SetActive(isActive);
         }
     }
 }
