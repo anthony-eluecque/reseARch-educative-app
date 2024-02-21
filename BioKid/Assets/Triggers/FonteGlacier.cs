@@ -8,6 +8,7 @@ public class FonteGlacier : MonoBehaviour
     public GameObject surfacePolarObject;
     public GameObject penguinObject;
     public GameObject iglooObject;
+    public GameObject oceanObject;
 
     public float delayFonteGlacier;
     public float delayDisappearance = 1f; 
@@ -16,6 +17,7 @@ public class FonteGlacier : MonoBehaviour
     private Vector3 originalPositionPolarBear;
     private Vector3 originalPositionPinguin;
     private Vector3 originalPositionIgloo;
+    private Vector3 originalPositionOcean;
 
     private bool isDelayActive = false;
     private bool isDisappearScheduled = false;
@@ -39,6 +41,10 @@ public class FonteGlacier : MonoBehaviour
         {
             originalPositionPinguin = penguinObject.transform.position;
         }
+        if (oceanObject != null)
+        {
+            originalPositionOcean = oceanObject.transform.position;
+        }
 
         StartCoroutine(StartDelay());
         disappearanceCoroutine = StartCoroutine(ScheduleDisappearance());
@@ -50,6 +56,7 @@ public class FonteGlacier : MonoBehaviour
         StartCoroutine(UpdateOriginPosition(polarObject, originalPositionPolarBear));
         StartCoroutine(UpdateOriginPosition(penguinObject, originalPositionPinguin));
         StartCoroutine(UpdateOriginPosition(iglooObject, originalPositionIgloo));
+        StartCoroutine(UpdateOriginPosition(oceanObject, originalPositionOcean));
 
         yield return null;
     }
@@ -63,6 +70,7 @@ public class FonteGlacier : MonoBehaviour
         SetObjectActive(polarObject, false);
         SetObjectActive(penguinObject, false);
         SetObjectActive(iglooObject, false);
+        SetObjectActive(oceanObject, false);
     }
 
     private void OnTriggerStay(Collider other)
@@ -80,6 +88,9 @@ public class FonteGlacier : MonoBehaviour
 
             if (iglooObject != null)
                 iglooObject.transform.Translate(Vector3.down * Time.deltaTime);
+
+            if (iglooObject != null)
+                oceanObject.transform.Translate(Vector3.down * Time.deltaTime);
         }
     }
 
@@ -96,6 +107,7 @@ public class FonteGlacier : MonoBehaviour
         SetObjectActive(polarObject, true);
         SetObjectActive(penguinObject, true);
         SetObjectActive(iglooObject, true);
+        SetObjectActive(oceanObject, true);
 
         if (cubeObject != null)
         {
@@ -117,11 +129,17 @@ public class FonteGlacier : MonoBehaviour
             iglooObject.transform.position = originalPositionIgloo;
         }
 
+        if (oceanObject != null)
+        {
+            oceanObject.transform.position = originalPositionOcean;
+        }
+
 
         StopCoroutine(UpdateOriginPosition(surfacePolarObject, originalPositionGlacier));
         StopCoroutine(UpdateOriginPosition(polarObject, originalPositionPolarBear));
         StopCoroutine(UpdateOriginPosition(penguinObject, originalPositionPinguin));
         StopCoroutine(UpdateOriginPosition(iglooObject, originalPositionIgloo));
+        StopCoroutine(UpdateOriginPosition(oceanObject, originalPositionOcean));
 
     }
 
